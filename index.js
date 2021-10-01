@@ -162,16 +162,16 @@ async function getStreamsData () {
 
 //use localStorage to save and access the data and cursor
 async function numofPages () {
-  // return Math.ceil(
-  //   parseInt(sessionStorage.getItem('total')) /
-  //     parseInt(sessionStorage.getItem('records_per_page'))
-  // )
   return Math.ceil(
-    (parseInt(sessionStorage.getItem('total')) +
-      parseInt(sessionStorage.getItem('records_per_page')) -
-      1) /
+    parseInt(sessionStorage.getItem('total')) /
       parseInt(sessionStorage.getItem('records_per_page'))
   )
+  // return Math.ceil(
+  //   (parseInt(sessionStorage.getItem('total')) +
+  //     parseInt(sessionStorage.getItem('records_per_page')) -
+  //     1) /
+  //     parseInt(sessionStorage.getItem('records_per_page'))
+  // )
   // return (
   //   (parseInt(sessionStorage.getItem('total')) +
   //     parseInt(sessionStorage.getItem('records_per_page')) -
@@ -229,7 +229,7 @@ async function changePage (page, type = null) {
 
   let newStreamURL
   if (type == 'prev') {
-    if (sessionStorage.getItem('cursor') !== '{}') {
+    if (sessionStorage.getItem('cursor') !== null) {
       newStreamURL =
         streamsGrabURL +
         '&first=5' +
@@ -243,7 +243,7 @@ async function changePage (page, type = null) {
         sessionStorage.getItem('old_cursor')
     }
   } else if (type == 'next') {
-    if (sessionStorage.getItem('cursor') !== '{}') {
+    if (sessionStorage.getItem('cursor') !== null) {
       newStreamURL =
         streamsGrabURL +
         '&first=5' +
@@ -330,7 +330,7 @@ async function changePage (page, type = null) {
     page_span.innerHTML = page + ' / ' + page_total
   } else {
     sessionStorage.setItem('old_cursor', sessionStorage.getItem('cursor'))
-    sessionStorage.setItem('cursor', streamData.pagination.cursor)
+    sessionStorage.setItem('cursor', null)
   }
 
   if (page == 1) {
