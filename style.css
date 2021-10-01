@@ -1,0 +1,150 @@
+/* font-family: 'Raleway', sans-serif; */
+
+html {
+  /* height: 100vh; */
+  min-width: 60%;
+  background-color: #0e0e10;
+  background-size: cover;
+  color: #efeff1;
+}
+
+.container {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  font-family: 'Raleway', sans-serif;
+  max-height: 100%;
+}
+
+.logo {
+  display: flex;
+  margin: auto 0;
+  flex-direction: row;
+  /* max-width: 75%; */
+  padding: 1.5rem 0;
+  align-items: center;
+  border: 0.1rem black solid;
+}
+
+.logo #headline {
+  padding-left: 1rem;
+}
+
+.main {
+  padding: 20px;
+  /* display: flex; */
+  border: 0.1rem black solid;
+  align-items: flex-start;
+}
+
+.main input {
+  padding: 0.2rem;
+  font-size: 1rem;
+  font-family: 'Raleway', sans-serif;
+  flex-grow: 1;
+}
+
+.main button {
+  /* padding: 0.2rem;
+  border-radius: 0.2rem; */
+  padding: 0.2rem 1rem;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+}
+
+.main button:hover {
+  color: #ffffff;
+  background-color: #1c3f80;
+}
+
+.streams_container {
+  padding: 0.5rem;
+  border: 0.1rem black solid;
+  /* height: 100vh; */
+}
+
+.streams_container #streams_section {
+  display: flex;
+  flex-direction: column;
+  /* min-height: fit-content; */
+}
+
+.streams_container #total_info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.streams_container #totalresults p {
+  margin: 0;
+}
+
+.streams_container #total_info .pages {
+  display: inline-flex;
+}
+
+.streams_container #total_info .pages a {
+  display: inline-flex;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.streams_container #total_info .pages a:hover:not(.active) {
+  background-color: #1c3f80;
+}
+
+.streams_container #total_info .pages img {
+  width: 30px;
+  height: auto;
+}
+
+.individual_stream {
+  max-height: 180px;
+  display: flex;
+  flex-direction: row;
+  font-family: 'Raleway', sans-serif;
+  /* overflow: auto; */
+  /* text-overflow: ellipsis; */
+  margin: 1rem;
+}
+
+.individual_stream img {
+  display: inline;
+  /* height: fit-content; */
+  text-align: center;
+}
+
+.individual_stream .stream_info {
+  display: flex;
+  flex-direction: column;
+}
+
+.individual_stream h3 {
+  padding: 0 1rem;
+  margin: 0;
+}
+
+.individual_stream .username {
+  font-size: medium;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.stream_info .visit_stream {
+  margin: 0.5rem 0;
+  padding: 0 1rem;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.stream_info p {
+  word-wrap: break-word;
+  margin: 0.5rem 0;
+  padding: 0 1rem;
+}
+
+#errorText {
+  color: red;
+  font-weight: bolder;
+}
