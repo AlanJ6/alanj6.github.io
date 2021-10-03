@@ -10,8 +10,14 @@ function fetchApi (url) {
   return new Promise(async function (resolve, reject) {
     let xhr = new XMLHttpRequest()
     xhr.open('GET', url, true)
+    // xhr.setRequestHeader('Access-Control-Allow-Origin', '*')
+    // xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET')
+    // xhr.setRequestHeader('Access-Control-Max-Age', '86400')
+    // xhr.setRequestHeader('Access-Control-Allow-Credentials', 'true')
     xhr.setRequestHeader('Client-ID', twitchappclientid)
     xhr.setRequestHeader('Authorization', 'Bearer ' + oath)
+    // xhr.setRequestHeader('Cache-Control', 'public')
+    // xhr.setRequestHeader('Cache-Control', 'max-age=10000')
 
     xhr.onload = function (e) {
       if (xhr.status === 200 && xhr.status < 300) {

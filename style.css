@@ -158,6 +158,20 @@
     }
 
     @media (max-width: 649px) {
+      .container {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: auto;
+        font-family: 'Raleway', sans-serif;
+        max-height: 100%;
+      }
+
+      .visit_stream {
+        color: red;
+      }
+
       .individual_stream {
         flex-direction: column;
         max-height: fit-content;
