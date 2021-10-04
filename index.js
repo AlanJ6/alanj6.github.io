@@ -129,7 +129,12 @@ async function getStreamsData () {
         '</p>'
 
       numofPages().then(function (res) {
-        pages.innerHTML += '<span id="page"> 1 / ' + res + '</span>'
+        pages.innerHTML +=
+          '<span id="page">' +
+          (parseInt(sessionStorage.getItem('total')) == 0 ? '0' : '1') +
+          ' / ' +
+          res +
+          '</span>'
         sessionStorage.setItem('page_total', res)
       })
 
